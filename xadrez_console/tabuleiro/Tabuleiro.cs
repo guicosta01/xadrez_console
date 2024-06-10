@@ -5,10 +5,23 @@ using System.Threading.Tasks;
 
 namespace xadrez_console.tabuleiro
 {
-    public class Tabuleiro(int linhas, int colunas)
+    public class Tabuleiro
     {
-        public int linhas { get; set; } = linhas;
-        public int colunas { get; set; } = colunas;
-        private Peca[,] pecas = new Peca[linhas, colunas];
+        public int linhas { get; set; }
+        public int colunas { get; set; }         
+        private Peca[,] pecas;
+
+        public Tabuleiro(int linhas, int colunas)
+        {
+            this.linhas = linhas;
+            this.colunas = colunas;
+            pecas = new Peca[linhas, colunas];
+        }
+
+        //metodo para acessar a peça
+        public Peca peca(int linha, int coluna)
+        {
+            return pecas[linha, coluna];
+        }
     }
 }

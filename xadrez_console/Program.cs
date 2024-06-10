@@ -1,5 +1,6 @@
 ﻿
 using System;
+using xadrez_console;
 using xadrez_console.tabuleiro;
 
 Console.WriteLine("Hello, World!");
@@ -8,3 +9,4 @@ Console.WriteLine("Posição: " + P);
 
 Tabuleiro tab = new(8, 8);
 Console.WriteLine(tab);
+Tela.imprimirTabuleiro(tab);
