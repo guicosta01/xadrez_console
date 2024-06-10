@@ -7,17 +7,17 @@ namespace xadrez_console.tabuleiro
 {
     public class Peca
     {
-        public Posicao Posicao { get; set; }
+        public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
         public int qtdMovimentos { get; protected set; } //acessada por outras classes mas nao pode ser modificda por elas mesmo e subclases
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posicao, Tabuleiro tab, Cor cor)
+        public Peca(Tabuleiro tab, Cor cor)
         {
-            Posicao = posicao;
+            this.posicao = null;
             this.tab = tab;
             this.cor = cor;
-            qtdMovimentos = 0;
+            this.qtdMovimentos = 0;
         }
     }
 }
